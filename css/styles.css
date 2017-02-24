@@ -111,6 +111,7 @@ input:last-of-type {
 textarea {
     height: 100px;
     width: 100%;
+    resize: none; /*Is this correct?*/
 }
 
 input, select, textarea {
@@ -171,9 +172,14 @@ button {
         width: 75%;
     }
 
+    fieldset:first-of-type input:last-of-type {
+        max-width: 25%;
+    }
+
     fieldset:first-of-type label {
         display: inline-block;
         width: 175px;
     }​
 
 }
+
