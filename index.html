@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Registration for The Code Review | Joe Dodd</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,700" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,21 +17,22 @@
             <p>Get the latest news on how your code is doing, right in your inbox</p>
         </div>
         <hr>
+        <hr>
         <form action="index.html" method="post">
             <fieldset>
-                <h2>Contact Information</h2>
+                <legend>Contact Information</legend>
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="user_name" placeholder="Required">
+                <input required type="text" id="name" name="user_name" placeholder="Required">
                 <label for="email">Email Address</label>
-                <input type="text" id="email" name="user_email" placeholder="Required">
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="user_phone">
+                <input required type="text" id="email" name="user_email" placeholder="Required">
+                <label for="tel">Phone Number</label>
+                <input type="tel" id="tel" name="user_tel">
                 <label for="street">Street Address</label>
                 <input type="text" id="street" name="user_street">
                 <label for="city">City</label>
                 <input type="text" id="city" name="user_city">
                 <label for="state">State</label>
-                <select id="state">
+                <select id="state" name="user_state">
                     <option>Choose State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -88,23 +89,24 @@
                 <label for="zip">Zip Code</label>
                 <input type="text" id="zip" name="user_zip">
             </fieldset>
+            <hr>
             <fieldset>
-                <h2>Newsletter</h2>
+                <legend>Newsletter</legend>
                 <p>Select the newsletters you would like to receive</p>
-                <input type="checkbox" id="html" name="user_interest">
+                <input type="checkbox" id="html" name="user_interest" value="HTML_checkbox">
                 <label for="html">HTML News</label><br>
-                <input type="checkbox" id="css" name="user_interest">
+                <input type="checkbox" id="css" name="user_interest" value="CSS_checkbox">
                 <label for="css">CSS News</label><br>
-                <input type="checkbox" id="js" name="user_interest">
+                <input type="checkbox" id="js" name="user_interest" value="JS_checkbox">
                 <label for="js">JavaScript News</label><br>
                 <p>Newsletter Format</p>
-                <input type="radio" id="format-html" name="format">
+                <input type="radio" id="format-html" name="format" value="HTML_radio">
                 <label for="format-html">HTML</label><br>
-                <input type="radio" id="format-text" name="format">
+                <input type="radio" id="format-text" name="format" value="Plain_radio">
                 <label for="format-text">Plain Text</label><br>
-                <p>Other topics you'd like to hear about</p>
+                <label for="message">Other topics you'd like to hear about</label>
                 <textarea id="message" name="user_msg"></textarea><br>
-                <button type="signup" class="btn">Sign Up</button>
+                <input type="submit" class="button" value="Sign Up">
             </fieldset>
             <p class="form-foot">Copyright The Code Review</p>
         </form>
